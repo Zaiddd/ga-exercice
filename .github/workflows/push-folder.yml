@@ -3,7 +3,7 @@ name: Push only when a specific folder is modified
 on:
   push:
     paths:
-      - 'src/Test'
+      - 'src/Tests/**'
 
 jobs:
   build-test:
