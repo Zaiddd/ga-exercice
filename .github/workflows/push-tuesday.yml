@@ -1,0 +1,21 @@
+name: Push every Tuesday at 3 am
+
+on:
+  push:
+  schedule:
+    - cron: '0 3 * * */2'
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+#      - run: npm ci
+#      - run: npm run build
+#      - run: npm test
