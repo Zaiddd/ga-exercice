@@ -1,4 +1,4 @@
-name: Push every 5 minutes
+name: Push every 1h30
 
 on:
   push:
