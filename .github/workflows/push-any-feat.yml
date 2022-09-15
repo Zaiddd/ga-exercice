@@ -1,4 +1,4 @@
-name: Push only on branch dev
+name: Push on any branch starting with 'feat'
 
 on:
   push:

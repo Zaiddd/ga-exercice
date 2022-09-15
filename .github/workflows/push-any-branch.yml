@@ -1,4 +1,4 @@
-name: Push only on branch dev
+name: Push to any branch but 'staging'
 
 on:
   push:
