@@ -17,3 +17,6 @@ jobs:
           event-type: MyCustomEventName
           client-payload: '{"myFirstJobEvent": "Zaid le meilleur dev"}'
           # JSON payload with extra information about the webhook event that your action or workflow may use.
+      - run: npm ci
+      - run: npm run build
+      - run: npm test
