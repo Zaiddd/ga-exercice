@@ -3,7 +3,7 @@ name: Two jobs
 on:
   push:
   pull_request:
-    types: [ opened ]
+    types: [ opened, reopened ]
 
 jobs:
   build-test:
