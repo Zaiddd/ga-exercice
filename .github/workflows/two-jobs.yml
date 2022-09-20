@@ -2,6 +2,8 @@ name: Two jobs
 
 on:
   push:
+  pull_request:
+    types: [ opened ]
 
 jobs:
   build-test:
