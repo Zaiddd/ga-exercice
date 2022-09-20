@@ -3,7 +3,8 @@ name: Push every 1h30
 on:
   push:
   schedule:
-    - cron: '*/90 * * * *'
+    - cron : '0 0-21/3 * * *'
+    - cron : "30 1-22/3 * * *"
 
 jobs:
   build-test:
