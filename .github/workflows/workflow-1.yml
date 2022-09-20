@@ -1,7 +1,7 @@
 name: Call another workflow
 
 on:
-  workflow_dispatch:
+  push:
 
 jobs:
   build:
