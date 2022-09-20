@@ -1,9 +1,9 @@
-name: Push on any branch starting with 'feat'
+name: Push only when a specific folder is modified
 
 on:
   push:
-    branches:
-      - 'feat**'
+    paths:
+      - 'src/**'
 
 jobs:
   build-test:

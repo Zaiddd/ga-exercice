@@ -1,9 +1,9 @@
-name: Push on any branch starting with 'feat'
+name: Push every 1h30
 
 on:
   push:
-    branches:
-      - 'feat**'
+  schedule:
+    - cron: '*/90 * * * *'
 
 jobs:
   build-test:

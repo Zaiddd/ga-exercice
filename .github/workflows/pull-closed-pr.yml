@@ -1,9 +1,8 @@
-name: Push on any branch starting with 'feat'
+name: Pull when someone closes a PR
 
 on:
-  push:
-    branches:
-      - 'feat**'
+  pull_request:
+    types: [closed]
 
 jobs:
   build-test:

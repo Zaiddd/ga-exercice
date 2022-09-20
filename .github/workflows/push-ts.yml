@@ -1,9 +1,9 @@
-name: Push on any branch starting with 'feat'
+name: Push only when ts extension file is modified
 
 on:
   push:
-    branches:
-      - 'feat**'
+    paths:
+      - '**.ts'
 
 jobs:
   build-test:
