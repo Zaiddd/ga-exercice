@@ -9,9 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
       - name: Print client payload
         run: |
           echo 'ParamA' is ${{github.event.client_payload.paramA }}
           echo 'boolean' is ${{github.event.client_payload.boolean }}
-
