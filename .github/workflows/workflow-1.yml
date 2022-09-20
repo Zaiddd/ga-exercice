@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - name: Repository dispatch
-        uses: Zaiddd/ga-exercice@v1.0.0
+        uses: Zaiddd/ga-exercice@2.6.0
         with:
           # A repo scoped Github Personal Access Token
           token: ${{ secrets.REPO_PAT }}
