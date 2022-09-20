@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - name: Repository dispatch
-        uses: Zaiddd/ga-exercice@2.6.5
+        uses: peter-evans/repository-dispatch@v1.1.2
         with:
           # A repo scoped Github Personal Access Token
           token: ${{ secrets.REPO_PAT }}
@@ -17,6 +17,3 @@ jobs:
           event-type: MyCustomEventName
           client-payload: '{"myFirstJobEvent": "Zaid le meilleur dev"}'
           # JSON payload with extra information about the webhook event that your action or workflow may use.
-      - run: npm ci
-      - run: npm run build
-      - run: npm test
