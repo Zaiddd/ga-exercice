@@ -15,6 +15,5 @@ jobs:
           token: ${{ secrets.REPO_PAT }}
           # A custom webhook event name
           event-type: MyCustomEventName
-          client_payload: '{"myFirstJobEvent": "Zaid le meilleur dev"}'
+          client-payload: '{"myFirstJobEvent": "Zaid le meilleur dev"}'
           # JSON payload with extra information about the webhook event that your action or workflow may use.
-          client-payload: '{ "paramA": 123, "boolean": false}'
