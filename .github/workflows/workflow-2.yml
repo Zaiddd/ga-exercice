@@ -13,4 +13,3 @@ jobs:
         run: |
           echo 'ParamA' is ${{github.event.client_payload.paramA }}
           echo 'boolean' is ${{github.event.client_payload.boolean }}
-				  
