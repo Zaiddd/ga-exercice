@@ -89,7 +89,7 @@ jobs:
 				node-version: 16
 				
 			# (2.) Shell script :
-			- name: Unit Tests
+			- name: Unit Test
 			  run: |
 				  npm install
 				  npm test
