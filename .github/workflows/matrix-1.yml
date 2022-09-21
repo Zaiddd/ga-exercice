@@ -8,8 +8,8 @@ jobs:
     strategy:
       matrix:
         node-version: [ 12, 14, 16 ]
-        os: [ ubuntu-latest, windows-latest ]
-    runs-on: ${{ matrix.os }}
+#        os: [ ubuntu-latest ]
+    runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: node-app
