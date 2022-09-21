@@ -5,12 +5,12 @@ on:
 
 jobs:
   docker-1:
-#    container:
-#      image: node:16
+    container:
+      image: node:16
     strategy:
       matrix:
         node-version: [ 12, 14, 16 ]
-        os: [ ubuntu-latest, windows-latest ]
+        os: [ ubuntu-latest ]
     runs-on: ${{ matrix.os }}
     defaults:
       run:
@@ -21,9 +21,9 @@ jobs:
 #      - uses: actions/setup-node@v3
 #        with:
 #          node-version: ${{ matrix.node-version }}
-      - uses: addnab/docker-run-action@v3
-        with:
-          image: node:${{ matrix.node-version }}
+#      - uses: addnab/docker-run-action@v3
+#        with:
+#          image: node:${{ matrix.node-version }}
 
       - run: npm install
       - run: npm ci
