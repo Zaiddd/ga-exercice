@@ -6,6 +6,9 @@ on:
 jobs:
   ruuner-1:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: node-app
 
     steps:
       - uses: actions/checkout@v3
@@ -14,7 +17,6 @@ jobs:
         with:
           node-version: 16
 
-      - run: cd node-app
       - run: npm ci
       - run: npm run build
       - run: npm test
