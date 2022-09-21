@@ -70,7 +70,7 @@ Worflow files glue together existing actions in sequence
 	- *Windows*: **Powershell**
 
 ```yaml
-name: Exemple workflow
+name: Exemple workflows
 
 on:
 	push:
@@ -146,7 +146,7 @@ try {
   console.log(`Hello ${nameToGreet}!`);
   const time = new Date().toTimeString();
   core.setOutput("time", time);
-  // Get the JSON webhook payload for the event that triggered the workflow
+  // Get the JSON webhook payload for the event that triggered the workflows
 //   const payload = JSON.stringify(github.context.payload, undefined, 2);
 //   console.log(`The event payload: ${payload}`);
 } catch (error) {
@@ -322,7 +322,7 @@ Public repositories with self-hosted runners pose potential risks.
 
 Triggered workflow :
 ```yaml
-name: Target for call from another workflow
+name: Target for call from another workflows
 
 on:
 	repository_dispatch:
@@ -343,7 +343,7 @@ jobs:
 
 Caller workflow :
 ```yaml
-name: Call another workflow
+name: Call another workflows
 
 on:
 	workflow_dispatch:
@@ -360,6 +360,6 @@ jobs:
 				  token: ${{ secrets.REPO_PAT }}
 				  # A custom webhook event name
 				  event-type: MyCustomEventName
-				  # JSON payload with extra information about the webhook event that your action or workflow may use.
+				  # JSON payload with extra information about the webhook event that your action or workflows may use.
 				  client-payload: '{ "paramA": 123, "boolean": false}'
 ```

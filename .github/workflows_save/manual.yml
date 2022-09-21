@@ -1,5 +1,3 @@
-name: Events exercices
-
 on:
   workflow_dispatch:
 
@@ -8,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print the event that triggered this workflow
+      - name: Print the event that triggered this workflows
         run: |
           echo ${{ github.event_name }}
 

@@ -1,4 +1,4 @@
-name: Target for call from another workflow
+name: Target for call from another workflows
 
 on:
   repository_dispatch:
