@@ -7,8 +7,8 @@ jobs:
   matrix-1:
     strategy:
       matrix:
-        version: [ 12, 14, 16 ]
-        os: [ ubuntu-latest ]
+        node-version: [ 12, 14, 16 ]
+#        os: [ ubuntu-latest ]
     runs-on: ubuntu-latest
     defaults:
       run:
