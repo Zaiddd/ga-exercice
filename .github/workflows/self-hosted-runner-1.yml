@@ -1,0 +1,26 @@
+name: Self hosted runner 1
+
+on:
+  push:
+
+jobs:
+  matrix-2:
+    strategy:
+      matrix:
+        node-version: [ 12, 14, 16 ]
+        os: [ ubuntu-latest ]
+    runs-on: self-hosted
+    defaults:
+      run:
+        working-directory: node-app
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - run: npm install
+      - run: npm ci
+      - run: npm run test
+      - run: npm start
