@@ -1,0 +1,25 @@
+name: Matrix Exo 1
+
+on:
+  push:
+
+jobs:
+  matrix-1:
+    strategy:
+      matrix:
+        version: [ 12, 14, 16 ]
+        os: [ ubuntu-latest ]
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: node-app
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - run: npm install
+      - run: npm ci
+      - run: npm run test
